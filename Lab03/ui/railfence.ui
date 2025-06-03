@@ -33,7 +33,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Key</string>
+     <string>RAILFENCE_CIPHER</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -55,7 +55,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Dương Trần Bão_2280600244</string>
+     <string>RAILFENCE_CIPHER</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -77,7 +77,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Cipher_Text</string>
+     <string>RAILFENCE_CIPHER</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="KEY">
@@ -109,7 +109,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Plain_Text</string>
+     <string>RAILFENCE_CIPHER</string>
     </property>
    </widget>
    <widget class="QPushButton" name="butEN">
@@ -188,7 +188,7 @@
      </font>
     </property>
     <property name="text">
-     <string>playfair_CIPHER</string>
+     <string>RAILFENCE_CIPHER</string>
     </property>
    </widget>
   </widget>

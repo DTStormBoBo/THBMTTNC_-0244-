@@ -9,8 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -106,7 +105,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label_5.setText(_translate("MainWindow", "Cipher_Text"))
-        self.label.setText(_translate("MainWindow", "playfair_CIPHER"))
+        self.label.setText(_translate("MainWindow", "VIGENERE_CIPHER"))
         self.label_2.setText(_translate("MainWindow", "Dương Trần Bão_2280600244"))
         self.butDE.setText(_translate("MainWindow", "Decrypt"))
         self.label_3.setText(_translate("MainWindow", "Plain_Text"))

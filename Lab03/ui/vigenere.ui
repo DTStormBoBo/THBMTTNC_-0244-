@@ -52,7 +52,7 @@
      </font>
     </property>
     <property name="text">
-     <string>playfair_CIPHER</string>
+     <string>VIGENERE_CIPHER</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">

@@ -9,8 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-import os
-os.environ['QT_QPA_PLATFORM_PLUGIN_PATH'] = "../platforms"
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -35,7 +34,7 @@ class Ui_MainWindow(object):
         self.CITEXT.setGeometry(QtCore.QRect(110, 240, 381, 81))
         self.CITEXT.setObjectName("CITEXT")
         self.butEN = QtWidgets.QPushButton(self.centralwidget)
-        self.butEN.setGeometry(QtCore.QRect(420, 340, 75, 31))
+        self.butEN.setGeometry(QtCore.QRect(420, 350, 75, 31))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
