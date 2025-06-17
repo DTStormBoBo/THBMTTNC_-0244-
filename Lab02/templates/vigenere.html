@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vigenere Cipher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to right, #e0f7fa, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main-box {
+            max-width: 900px; /* rộng hơn cho 2 cột */
+            margin: 60px auto;
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h4.section-title {
+            font-weight: 700;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 12px 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .alert {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container main-box">
+        <h2>VIGENERE CIPHER</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <section class="mb-5">
+                    <h4 class="section-title">ENCRYPTION</h4>
+                    <form method="POST" action="/app/vigenere/encrypt">
+                        <div class="form-group">
+                            <label for="inputPlainText">Plain text:</label>
+                            <input type="text" id="inputPlainText" class="form-control" name="inputPlainText"
+                                placeholder="Input Plain Text" value="{{ input_plain_text or '' }}" required autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputKeyPlain">Key (Word):</label>
+                            <input type="text" id="inputKeyPlain" class="form-control" name="inputKeyPlain"
+                                placeholder="Input Key Word" value="{{ input_key_plain or '' }}" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Encrypt</button>
+                    </form>
+
+                    {% if encrypted_result %}
+                    <div class="alert alert-info mt-3" role="alert">
+                        <strong>Encrypted Text:</strong> {{ encrypted_result }}
+                    </div>
+                    {% endif %}
+                </section>
+            </div>
+
+            <div class="col-md-6">
+                <section>
+                    <h4 class="section-title">DECRYPTION</h4>
+                    <form method="POST" action="/app/vigenere/decrypt">
+                        <div class="form-group">
+                            <label for="inputCipherText">Cipher text:</label>
+                            <input type="text" id="inputCipherText" class="form-control" name="inputCipherText"
+                                placeholder="Input Cipher Text" value="{{ input_cipher_text or '' }}" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputKeyCipher">Key (Word):</label>
+                            <input type="text" id="inputKeyCipher" class="form-control" name="inputKeyCipher"
+                                placeholder="Input Key Word" value="{{ input_key_cipher or '' }}" required />
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block">Decrypt</button>
+                    </form>
+
+                    {% if decrypted_result %}
+                    <div class="alert alert-success mt-3" role="alert">
+                        <strong>Decrypted Text:</strong> {{ decrypted_result }}
+                    </div>
+                    {% endif %}
+                </section>
+            </div>
+        </div>
+
+        <p class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </p>
+    </div>
+</body>
+
+</html>
